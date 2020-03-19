@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * { box-sizing: border-box; }
+        body{margin:0;}
+        .video-background {
+            background: #000;
+            position: fixed;
+            top: 0; right: 0; bottom: 0; left: 0;
+            z-index: -99;
+        }
+        .video-foreground,
+        .video-background iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        #vidtop-content {
+            top: 0;
+            color: #fff;
+        }
+        .vid-info { position: absolute; top: 0; right: 0; width: 33%; background: rgba(0,0,0,0.3); color: #fff; padding: 1rem; font-family: Avenir, Helvetica, sans-serif; }
+        .vid-info h1 { font-size: 2rem; font-weight: 700; margin-top: 0; line-height: 1.2; }
+        .vid-info a { display: block; color: #fff; text-decoration: none; background: rgba(0,0,0,0.5); transition: .6s background; border-bottom: none; margin: 1rem auto; text-align: center; }
+        @media (min-aspect-ratio: 16/9) {
+            .video-foreground { height: 300%; top: -100%; }
+        }
+        @media (max-aspect-ratio: 16/9) {
+            .video-foreground { width: 300%; left: -100%; }
+        }
+        @media all and (max-width: 600px) {
+            .vid-info { width: 50%; padding: .5rem; }
+            .vid-info h1 { margin-bottom: .2rem; }
+        }
+        @media all and (max-width: 500px) {
+            .vid-info .acronym { display: none; }
+        }
+
+
+        .video-background{
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+        }
+        .video-foreground{
+            /*border: 10px solid yellow;*/
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<style>
+    #portada-video-background{
+        width: 99vw;/****************  *******************/
+        height: 100vh;
+        position: relative;
+    }
+    div.titulos-portada{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        z-index: 1;
+    }
+    div.titulos-portada h1{
+        font-size: 3.7rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+    }
+    div.titulos-portada p{
+        font-size: 2rem;
+    }
+</style>
+
+
+<section id="portada-video-background">
+    <div class="video-background">
+        <div class="video-foreground">
+            <iframe src="https://www.youtube.com/embed/-gaYQChhOMQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1
+            &playlist=-gaYQChhOMQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="titulos-portada padding-lateral">
+        <h1 class="font-futura-pt">TITULO GRANDE</h1>
+        <p class="font-raleway">Un subtitulo para dar algo más de información</p>
+    </div>
+
+
+</section>
+
+
+<h1>
+Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de
+relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)
+desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No
+sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando
+esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales
+contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker,
+el cual incluye versiones de Lorem Ipsum.
+</h1>
+
+
+</body>
+</html>
